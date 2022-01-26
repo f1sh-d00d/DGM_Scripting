@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class howdy : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        print("Ground Control to Major Tom");
+        Debug.Log("howdy gamers");
     }
 
     // Update is called once per frame
