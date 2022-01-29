@@ -52,26 +52,29 @@ public class Variables : MonoBehaviour
         {
             Debug.Log("ur poor brother");
         }
+        else if (money >= 61)
+        {
+            Debug.Log("spend on!");
+        }
         if (health >= 100)
         {
             Debug.Log("you are in perfect health");
-
         }
-        else if (health <= 75 - 99)
+        else if (health >= 75 && health <= 99)
         {
             Debug.Log("you are doing fine");
         }
-        else if(health <= 50 - 74)
+        else if(health >= 50 && health <= 74)
         {
             Debug.Log("you are not doing as fine");
         }
-        else if(health <= 25 - 49)
+        else if(health >= 25 && health <= 49)
         {
             Debug.Log("you are definitely now in bad shape");
         }
-        else if(health <= 1 - 24)
+        else if(health >= 1 && health <= 24)
         {
-            Debug.Log("this is the end");
+            Debug.Log("x_x");
         }
     }
 }
