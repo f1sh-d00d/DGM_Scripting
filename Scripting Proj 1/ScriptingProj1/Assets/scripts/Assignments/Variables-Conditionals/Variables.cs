@@ -16,6 +16,7 @@ public class Variables : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*
         money = 175;
         Debug.Log("wallet: $" + money);
         health = 100;
@@ -76,5 +77,6 @@ public class Variables : MonoBehaviour
         {
             Debug.Log("x_x");
         }
+        */
     }
 }

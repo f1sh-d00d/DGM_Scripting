@@ -23,6 +23,9 @@ public class If_Statements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // differnt variables
+
+        /*
         if (lightColor == "Red")
         {
             Debug.Log("the light is " + lightColor + ". Stop!");
@@ -102,5 +105,6 @@ public class If_Statements : MonoBehaviour
         {
             Debug.Log("Trophy Unlocked: Not Quite There. ");
         }
+        */
     }
 }
