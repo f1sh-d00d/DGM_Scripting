@@ -25,7 +25,7 @@ public class Player2controller : MonoBehaviour
         }
         if(Input.GetKey("right"))
         {
-            transform.Rotate(Vector3.up * Time.deltaTime * speed);
+            transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed);
         }
     }
 }
