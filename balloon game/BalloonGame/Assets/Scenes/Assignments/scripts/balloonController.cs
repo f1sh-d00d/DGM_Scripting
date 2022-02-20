@@ -9,6 +9,7 @@ public class balloonController : MonoBehaviour
     public int clicksToPop = 3;
     public int totalScore;
     public float scaleUp = .25f;
+    public ScoreManager scoreManager; //references the ScoreManager script
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class balloonController : MonoBehaviour
         
         if(clicksToPop == 0)
         {
+            scoreManager.IncreaseScoreText(scoreIncrease);
             Destroy(gameObject);
         }
         

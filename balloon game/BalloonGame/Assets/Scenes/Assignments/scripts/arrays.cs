@@ -7,8 +7,10 @@ public class arrays : MonoBehaviour
 
 {
     //array declarations
+
+    /*
     public string[] friendNames = { "Abed", "Troy", "Brita", "Jeff", "Annie", "Shirley", "Pierce" };
-    //                             {   0,      1,      2,      3,      4,        5,         6}
+//                                 {   0,      1,      2,      3,      4,        5,         6}
 
     public int[] numbers = { 1, 2, 3, 4, 5, 6 };
     public string[] weaponNames = { "shadows bane", "storm bringer", "the mouse", "literally a spatula", "gyallandor", "the boot" };
@@ -25,7 +27,7 @@ public class arrays : MonoBehaviour
     {
         // reading whole arrays
 
-        /*
+        
         foreach (string friendNames in friendNames)
         {
             Debug.Log(friendNames);
@@ -50,19 +52,20 @@ public class arrays : MonoBehaviour
         {
             Debug.Log(bandNames);
         }
-        */
+
+    //reading multiple specific variables
 
         Debug.Log(heroes[1] + " watches over " + NYCbarrios[1]);
         Debug.Log("One of my favorite movies of all time is " + sciFiMovies[0]);
         Debug.Log("The " + bandNames[4] + " is from " + NYCbarrios[0] + " and " + NYCbarrios[2]);
         Debug.Log("If I had to fight a demon, I would use a " + carBrands[0] + " and " + weaponNames[3]);
 
-        //read specific variables in the array
+        //read a single specific variables in the array
         //Debug.Log(bandNames[1]);
-
+    
      
     }
-
+    */
   
 }
   
