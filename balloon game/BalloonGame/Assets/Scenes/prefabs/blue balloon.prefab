@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5131438576451661744}
   - component: {fileID: 2158924778187615221}
   - component: {fileID: 5128775663956454320}
-  - component: {fileID: -331441411252620471}
+  - component: {fileID: 1557279083}
+  - component: {fileID: 1557279084}
   m_Layer: 0
   m_Name: blue balloon
   m_TagString: Untagged
@@ -98,7 +99,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-331441411252620471
+--- !u!114 &1557279083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,13 +108,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 2312742896645412153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41785e33ace0a4466b303196f61058fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 59abfa8e046664f1a803e993b95f66a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreIncrease: 100
-  clicksToPop: 3
+  clickToPop: 2
+  sizeIncrease: 0.25
+  blueScoreIncrease: 50
   totalScore: 0
-  scaleUp: 0.25
+  score_Manager: {fileID: 0}
+--- !u!114 &1557279084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2312742896645412153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ddf37fe0dca14572a752fa8c3c75646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
 --- !u!1 &2601546231047065861
 GameObject:
   m_ObjectHideFlags: 0
