@@ -747,7 +747,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3276776836370088012, guid: 7d3b4c3b7084949b4b4df2dd48f59da2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3276776836370088012, guid: 7d3b4c3b7084949b4b4df2dd48f59da2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -812,7 +812,7 @@ PrefabInstance:
       objectReference: {fileID: 1603690572}
     - target: {fileID: 659383482477270250, guid: 1a52bde58941144699a42642cd6d7562, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 659383482477270250, guid: 1a52bde58941144699a42642cd6d7562, type: 3}
       propertyPath: m_LocalPosition.x
@@ -860,28 +860,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a52bde58941144699a42642cd6d7562, type: 3}
---- !u!1001 &9089621261007211175
+--- !u!1001 &8843056280449763074
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 20287758, guid: ff3ea5e85ac5940939eaa97ee894323c, type: 3}
-      propertyPath: GreenScoreManager
-      value: 
-      objectReference: {fileID: 1603690572}
     - target: {fileID: 2445129433518285470, guid: ff3ea5e85ac5940939eaa97ee894323c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2445129433518285470, guid: ff3ea5e85ac5940939eaa97ee894323c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.58
+      value: -1.79
       objectReference: {fileID: 0}
     - target: {fileID: 2445129433518285470, guid: ff3ea5e85ac5940939eaa97ee894323c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.27
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2445129433518285470, guid: ff3ea5e85ac5940939eaa97ee894323c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -915,6 +911,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5137636919801009289, guid: ff3ea5e85ac5940939eaa97ee894323c, type: 3}
+      propertyPath: GreenScoreManager
+      value: 
+      objectReference: {fileID: 1603690572}
     - target: {fileID: 7573810613536125602, guid: ff3ea5e85ac5940939eaa97ee894323c, type: 3}
       propertyPath: m_Name
       value: green balloon
