@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
-    public float speed = 2.0f;
-    public float stopDistance = 1.5f;
+    public float speed;
+    public float stopDistance;
     public Transform target;
 
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();// finds player position
-        
+        speed = 2.0f;
+        stopDistance = 1.5f;
 
     }
 

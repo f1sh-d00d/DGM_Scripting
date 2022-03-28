@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MoveAndShoot : MonoBehaviour
 {
-    public float speed = 1.5f;
-    public float stopDistance = 4.0f;//how close enemy can get to player
-    public float retreatDistance = 2.0f;//how close player can get before enemy back away
+    public float speed;
+    public float stopDistance;//how close enemy can get to player
+    public float retreatDistance;//how close player can get before enemy back away
     public Transform target; // saves position of Player
     private float shotDelay;
     public float startDelay;
@@ -17,7 +17,10 @@ public class MoveAndShoot : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();// finds player position
         shotDelay = startDelay;
-
+        speed = 1.5f;
+        stopDistance = 4.0f;
+        retreatDistance = 2.0f;
+        startDelay = 2.0f;
     }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class MoveAndShoot : MonoBehaviour
         if (shotDelay <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);// fire/instantiate projectile on a cycle
+            shotDelay = startDelay;
         }
         else
         {

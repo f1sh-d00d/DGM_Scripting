@@ -144,9 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c312e7b7cb614c84ab3514cd5234ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  stopDistance: 0
-  retreatDistance: 0
+  speed: 1.5
+  stopDistance: 4
+  retreatDistance: 2
   target: {fileID: 0}
-  startDelay: 0
-  projectile: {fileID: 0}
+  startDelay: 1
+  projectile: {fileID: 3460561864863818256, guid: b11b8e7c9150442c3850ab0485b23360, type: 3}
