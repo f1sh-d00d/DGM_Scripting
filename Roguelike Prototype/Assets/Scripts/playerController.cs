@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 
     [Header("Player Health")]
@@ -61,7 +61,7 @@ public class playerController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, attackRange, enemyLayer);
         if (hit.collider != null)//checks to make sure the player isn't hiting nothing
         {
-            hit.collider.GetComponent<enemyManager>()?.TakeDamage(damage);
+            hit.collider.GetComponent<EnemyManager>()?.TakeDamage(damage);
         }
     }
     public void Die()

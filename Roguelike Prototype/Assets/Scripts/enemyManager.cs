@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyManager : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
-    public playerController player;
+    public PlayerController player;
 
     [Header("Enemy Health")]
     public int curHP;
@@ -19,7 +19,7 @@ public class enemyManager : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Player").GetComponent<playerController>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
 
     }
     // Update is called once per frame
