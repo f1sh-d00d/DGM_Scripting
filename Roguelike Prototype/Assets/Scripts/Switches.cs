@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Switches : MonoBehaviour
-{
+{/*
     public string npcConv;
     public int socialClass;
     public float wallet;
@@ -45,7 +45,7 @@ public class Switches : MonoBehaviour
         switch(socialClass)
         {
             case 5:
-                Debug.Log("Welcome Might Ruler");
+                Debug.Log("Welcome Mighty Ruler");
                 break;
             case 4:
                 Debug.Log("Welcome Duke");
@@ -278,7 +278,7 @@ public class Switches : MonoBehaviour
                 break;
         }
 
-    }
+    }*/
 
 }  
 

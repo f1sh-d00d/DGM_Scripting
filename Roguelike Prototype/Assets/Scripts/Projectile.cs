@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     public float speed;
     public Transform player;
     private Vector2 target;
+    private EnemyManager enemyManager;
 
 
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class Projectile : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             DestroyProjectile();
+            enemyManager.Attack();
         }
     }
 

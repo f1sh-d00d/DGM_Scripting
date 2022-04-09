@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8396323198830289629}
   - component: {fileID: 8396323198830289628}
   - component: {fileID: 8396323198830289627}
-  m_Layer: 0
+  - component: {fileID: 114892097}
+  m_Layer: 6
   m_Name: Enemy_Ranged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,3 +151,23 @@ MonoBehaviour:
   target: {fileID: 0}
   startDelay: 1
   projectile: {fileID: 3460561864863818256, guid: b11b8e7c9150442c3850ab0485b23360, type: 3}
+--- !u!114 &114892097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8396323198830289616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156d6c83469a94de0bc3180c98780839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  curHP: 10
+  maxHP: 10
+  attackRange: 0
+  attackRate: 0
+  lastAttackTime: 0
+  damage: 0
+  lootDrop_item: {fileID: 6924859367845624751, guid: 6e585754518884916a29ad07ecb7cd4f, type: 3}

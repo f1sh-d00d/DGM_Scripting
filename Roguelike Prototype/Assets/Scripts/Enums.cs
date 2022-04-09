@@ -6,7 +6,7 @@ public class Enums : MonoBehaviour
 
 
 
-{
+{/*
     enum Color { red, orange, green, blue, purple };
     enum CarMake { ford, toyota, dodge };
     enum CarModel { Mustang, Tacoma, Charger};
@@ -133,5 +133,5 @@ public class Enums : MonoBehaviour
         {
             Debug.Log("nice choice");
         }
-    }
+    }*/
 }

@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Health")]
     public int curHP; // players current HP
     public int maxHP; // max HP player can have
-
+    public HealthBar healthBar;
 
     [Header("Player Movement")]
     public float moveSpeed = 5.0f; //speed of player movement
@@ -24,12 +24,19 @@ public class PlayerController : MonoBehaviour
     public int damage;// damage player can deal
     public LayerMask enemyLayer;
 
+    [Header("Inventory")]
+    public int key;
+    public int coins;
+    public int gems;
+    public int ammo;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // references Rigidbody2D component
-
+        curHP = maxHP;
+        healthBar.SetHealth(maxHP);
     }
 
     // Update is called once per frame
@@ -37,13 +44,12 @@ public class PlayerController : MonoBehaviour
     {
         movement.x = Input.GetAxis("Horizontal"); // input for L R movement
         movement.y = Input.GetAxis("Vertical"); // input for Up Down movement
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L)) // L for attack
         {
             if(Time.time - lastAttackTime >= attackRate)
             {
                 Attack();
             }
-            
 
         }
     }
@@ -51,27 +57,29 @@ public class PlayerController : MonoBehaviour
     {
         //Apply physics and move character
 
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime); //references postion, controls(from update), and finally movement per second
         UpdateDirection();
     }
 
     void Attack()
     {
         lastAttackTime = Time.time;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, attackRange, enemyLayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, attackRange, enemyLayer); //set the place where the attack lands
+      
         if (hit.collider != null)//checks to make sure the player isn't hiting nothing
         {
             hit.collider.GetComponent<EnemyManager>()?.TakeDamage(damage);
         }
     }
-    public void Die()
+    public void Die() // destroys character sprite if health = 0
     {
-        Debug.Log("PLayer has... transcneded");
+        Debug.Log("Player has... transcneded");
     }
 
     public void TakeDamage(int damage)
     {
-        curHP -= damage;
+        curHP -= damage; //lowers HP variable
+        healthBar.SetHealth(curHP); //updates health bar using current HP
 
         if (curHP <= 0)
             Die();

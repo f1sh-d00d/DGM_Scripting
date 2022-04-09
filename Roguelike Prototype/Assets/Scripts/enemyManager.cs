@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public PlayerController player;
+    public PlayerController playerController;
 
     [Header("Enemy Health")]
     public int curHP;
@@ -16,16 +16,20 @@ public class EnemyManager : MonoBehaviour
     public float lastAttackTime;
     public int damage;// damage enemies can deal
 
+    [Header("Loot Drop")]
+    public GameObject lootDrop_item;
+
 
     private void Start()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
-
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        lootDrop_item = GameObject.Find("Key");
+        
     }
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - lastAttackTime >= attackRate && Vector2.Distance(transform.position, player.transform.position) < attackRange) 
+        if (Time.time - lastAttackTime >= attackRate && Vector2.Distance(transform.position, playerController.transform.position) < attackRange) 
         {
             Attack();
         }
@@ -37,7 +41,10 @@ public class EnemyManager : MonoBehaviour
         curHP -= damage;
 
         if(curHP <=0)
-           Die();
+        {
+            Die();
+            LootDrop();
+        }
        
     }
 
@@ -49,7 +56,12 @@ public class EnemyManager : MonoBehaviour
     public void Attack()
     {
         lastAttackTime = Time.time;
-        player.TakeDamage(damage);
+        playerController.TakeDamage(damage);
+    }
+
+    void LootDrop()
+    {
+        Instantiate(lootDrop_item, transform.position, Quaternion.identity);
     }
 
     
