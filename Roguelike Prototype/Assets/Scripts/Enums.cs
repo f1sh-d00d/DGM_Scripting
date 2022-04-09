@@ -10,7 +10,7 @@ public class Enums : MonoBehaviour
     enum Color { red, orange, green, blue, purple };
     enum CarMake { ford, toyota, dodge };
     enum CarModel { Mustang, Tacoma, Charger};
-    enum cheeses { gouda, cheddar, swiss, provolone };
+    enum cheeses { gouda, cheddar, swiss, provolone, pepperJack };
     enum bread { wheat, white, rye, wholeGrain, sourdough, baguette };
     enum meats { chicken, turkey, roastBeef, pastrami, bacon, none};
     enum toppings { lettuce, tomato, avacado, spinach, cucumber, pickles, sauerkraut, tomatoAndLettuce, none};
